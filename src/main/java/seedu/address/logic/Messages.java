@@ -45,7 +45,15 @@ public class Messages {
                 .append(person.getAddress())
                 .append("; Tags: ");
         person.getTags().forEach(builder::append);
+
+        // Add medical conditions if any exist
+        Set<String> conditions = person.getMedicalConditions();
+        if (!conditions.isEmpty()) {
+            builder.append("; Medical Conditions: ");
+            String conditionString = conditions.stream().collect(Collectors.joining(", "));
+            builder.append(conditionString);
+        }
+
         return builder.toString();
     }
-
 }

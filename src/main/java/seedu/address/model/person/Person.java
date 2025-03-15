@@ -24,17 +24,39 @@ public class Person {
     // Data fields
     private final Address address;
     private final Set<Tag> tags = new HashSet<>();
+    private final Set<String> medicalConditions = new HashSet<>();
 
     /**
      * Every field must be present and not null.
      */
-    public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags) {
-        requireAllNonNull(name, phone, email, address, tags);
+    public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags, Set<String> medicalConditions) {
+        requireAllNonNull(name, phone, email, address, tags, medicalConditions);
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.address = address;
         this.tags.addAll(tags);
+        this.medicalConditions.addAll(medicalConditions);
+    }
+
+    public Set<String> getMedicalConditions() {
+        return Collections.unmodifiableSet(medicalConditions);
+    }
+
+    /**
+     * Adds a medical condition to the person's record.
+     *
+     * This method creates a new {@code Person} object with the specified medical
+     * condition added to the existing set of conditions. It ensures that the original
+     * {@code Person} object remains unchanged, adhering to immutability principles.
+     *
+     * @param condition The medical condition to add.
+     * @return A new {@code Person} object with the added medical condition.
+     */
+    public Person addMedicalCondition(String condition) {
+        Set<String> updatedConditions = new HashSet<>(this.medicalConditions);
+        updatedConditions.add(condition);
+        return new Person(this.name, this.phone, this.email, this.address, this.tags, updatedConditions);
     }
 
     public Name getName() {
