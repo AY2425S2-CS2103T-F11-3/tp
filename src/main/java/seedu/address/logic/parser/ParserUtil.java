@@ -2,9 +2,7 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.StringUtil;
@@ -120,5 +118,21 @@ public class ParserUtil {
             tagSet.add(parseTag(tagName));
         }
         return tagSet;
+    }
+
+    public static Map<Tag, Tag> parseRenameTags(Collection<String> tags) throws ParseException {
+        requireNonNull(tags);
+        Map<Tag, Tag> renameTags = new HashMap<>();
+        for (String tagPair : tags) {
+            String[] tagNames = tagPair.split("->");
+            if (tagNames.length == 2) {
+                Tag oldTag = parseTag(tagNames[0].trim());
+                Tag newTag = parseTag(tagNames[1].trim());
+                renameTags.put(oldTag, newTag);
+            } else {
+                throw new ParseException("Invalid tag rename format.");
+            }
+        }
+        return renameTags;
     }
 }

@@ -27,6 +27,7 @@ public class PersonBuilder {
     private Address address;
     private Set<Tag> tags;
 
+
     /**
      * Creates a {@code PersonBuilder} with the default details.
      */
@@ -62,6 +63,27 @@ public class PersonBuilder {
      */
     public PersonBuilder withTags(String ... tags) {
         this.tags = SampleDataUtil.getTagSet(tags);
+        return this;
+    }
+
+    public PersonBuilder withAllergies(String... allergies) {
+        for (String allergy : allergies) {
+            this.tags.add(new Tag("Allergy: " + allergy));
+        }
+        return this;
+    }
+
+    public PersonBuilder withInsurance(String... insurancePlans) {
+        for (String insurance : insurancePlans) {
+            this.tags.add(new Tag("Insurance: " + insurance));
+        }
+        return this;
+    }
+
+    public PersonBuilder withCondition(String... conditions) {
+        for (String condition : conditions) {
+            this.tags.add(new Tag("Condition: " + condition));
+        }
         return this;
     }
 
