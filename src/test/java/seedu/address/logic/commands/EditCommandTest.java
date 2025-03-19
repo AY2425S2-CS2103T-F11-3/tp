@@ -25,8 +25,14 @@ import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
 import seedu.address.model.UserPrefs;
 import seedu.address.model.person.Person;
+import seedu.address.model.tag.Tag;
 import seedu.address.testutil.EditPersonDescriptorBuilder;
 import seedu.address.testutil.PersonBuilder;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Contains integration tests (interaction with the Model) and unit tests for EditCommand.
@@ -37,9 +43,14 @@ public class EditCommandTest {
 
     @Test
     public void execute_allFieldsSpecifiedUnfilteredList_success() {
-        Person editedPerson = new PersonBuilder().build();
+        Person editedPerson = new PersonBuilder().withTags(
+                "Allergy: Peanuts", "Insurance: MediShield", "Condition: Asthma").build();
         EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder(editedPerson).build();
-        EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON, descriptor);
+
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
+        EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON, descriptor, tagsToRemove, renameTags);
 
         String expectedMessage = String.format(EditCommand.MESSAGE_EDIT_PERSON_SUCCESS, Messages.format(editedPerson));
 
@@ -56,11 +67,16 @@ public class EditCommandTest {
 
         PersonBuilder personInList = new PersonBuilder(lastPerson);
         Person editedPerson = personInList.withName(VALID_NAME_BOB).withPhone(VALID_PHONE_BOB)
-                .withTags(VALID_TAG_HUSBAND).build();
+                .withTags(VALID_TAG_HUSBAND, "Allergy: Peanuts", "Insurance: MediShield", "Condition: Asthma").build();
 
         EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB)
-                .withPhone(VALID_PHONE_BOB).withTags(VALID_TAG_HUSBAND).build();
-        EditCommand editCommand = new EditCommand(indexLastPerson, descriptor);
+                .withPhone(VALID_PHONE_BOB).withTags(VALID_TAG_HUSBAND,
+                        "Allergy: Peanuts", "Insurance: MediShield", "Condition: Asthma").build();
+
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
+        EditCommand editCommand = new EditCommand(indexLastPerson, descriptor, tagsToRemove, renameTags);
 
         String expectedMessage = String.format(EditCommand.MESSAGE_EDIT_PERSON_SUCCESS, Messages.format(editedPerson));
 
@@ -72,7 +88,10 @@ public class EditCommandTest {
 
     @Test
     public void execute_noFieldSpecifiedUnfilteredList_failure() {
-        EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON, new EditPersonDescriptor());
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+        EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON, new EditPersonDescriptor(),
+                tagsToRemove, renameTags);
 
         editCommand.setConfirmation(false);
         assertCommandFailure(editCommand, model, EditCommand.MESSAGE_NO_CHANGES);
@@ -83,9 +102,14 @@ public class EditCommandTest {
         showPersonAtIndex(model, INDEX_FIRST_PERSON);
 
         Person personInFilteredList = model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());
-        Person editedPerson = new PersonBuilder(personInFilteredList).withName(VALID_NAME_BOB).build();
+        Person editedPerson = new PersonBuilder(personInFilteredList).withName(VALID_NAME_BOB)
+                .withTags("Allergy: Peanuts", "Insurance: MediShield", "Condition: Asthma").build();
+
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
         EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON,
-                new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB).build());
+                new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB).build(), tagsToRemove, renameTags);
 
         String expectedMessage = String.format(EditCommand.MESSAGE_EDIT_PERSON_SUCCESS, Messages.format(editedPerson));
 
@@ -98,8 +122,15 @@ public class EditCommandTest {
     @Test
     public void execute_duplicatePersonUnfilteredList_failure() {
         Person firstPerson = model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());
-        EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder(firstPerson).build();
-        EditCommand editCommand = new EditCommand(INDEX_SECOND_PERSON, descriptor);
+        EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder(firstPerson)
+                .withTags("Allergy: " + firstPerson.getTags(),
+                        "Insurance: " + firstPerson.getTags(), "Condition: " + firstPerson.getTags()).build();
+
+
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
+        EditCommand editCommand = new EditCommand(INDEX_SECOND_PERSON, descriptor, tagsToRemove, renameTags);
         editCommand.setConfirmation(false);
         assertCommandFailure(editCommand, model, EditCommand.MESSAGE_DUPLICATE_PERSON);
     }
@@ -110,8 +141,12 @@ public class EditCommandTest {
 
         // edit person in filtered list into a duplicate in address book
         Person personInList = model.getAddressBook().getPersonList().get(INDEX_SECOND_PERSON.getZeroBased());
+
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
         EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON,
-                new EditPersonDescriptorBuilder(personInList).build());
+                new EditPersonDescriptorBuilder(personInList).build(), tagsToRemove, renameTags);
         editCommand.setConfirmation(false);
         assertCommandFailure(editCommand, model, EditCommand.MESSAGE_DUPLICATE_PERSON);
     }
@@ -120,7 +155,11 @@ public class EditCommandTest {
     public void execute_noChangesUnfilteredList_failure() {
         Person firstPerson = model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());
         EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder(firstPerson).build();
-        EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON, descriptor);
+
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
+        EditCommand editCommand = new EditCommand(INDEX_FIRST_PERSON, descriptor, tagsToRemove, renameTags);
         editCommand.setConfirmation(false);
         assertCommandFailure(editCommand, model, EditCommand.MESSAGE_NO_CHANGES);
     }
@@ -129,7 +168,11 @@ public class EditCommandTest {
     public void execute_invalidPersonIndexUnfilteredList_failure() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredPersonList().size() + 1);
         EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB).build();
-        EditCommand editCommand = new EditCommand(outOfBoundIndex, descriptor);
+
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
+        EditCommand editCommand = new EditCommand(outOfBoundIndex, descriptor, tagsToRemove, renameTags);
         editCommand.setConfirmation(false);
         assertCommandFailure(editCommand, model, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
     }
@@ -145,19 +188,25 @@ public class EditCommandTest {
         // ensures that outOfBoundIndex is still in bounds of address book list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getAddressBook().getPersonList().size());
 
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
         EditCommand editCommand = new EditCommand(outOfBoundIndex,
-                new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB).build());
+                new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB).build(), tagsToRemove, renameTags);
         editCommand.setConfirmation(false);
         assertCommandFailure(editCommand, model, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
     }
 
     @Test
     public void equals() {
-        final EditCommand standardCommand = new EditCommand(INDEX_FIRST_PERSON, DESC_AMY);
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
+        final EditCommand standardCommand = new EditCommand(INDEX_FIRST_PERSON, DESC_AMY, tagsToRemove, renameTags);
 
         // same values -> returns true
         EditPersonDescriptor copyDescriptor = new EditPersonDescriptor(DESC_AMY);
-        EditCommand commandWithSameValues = new EditCommand(INDEX_FIRST_PERSON, copyDescriptor);
+        EditCommand commandWithSameValues = new EditCommand(INDEX_FIRST_PERSON, copyDescriptor, tagsToRemove, renameTags);
         standardCommand.setConfirmation(false);
         assertTrue(standardCommand.equals(commandWithSameValues));
 
@@ -171,17 +220,21 @@ public class EditCommandTest {
         assertFalse(standardCommand.equals(new ClearCommand()));
 
         // different index -> returns false
-        assertFalse(standardCommand.equals(new EditCommand(INDEX_SECOND_PERSON, DESC_AMY)));
+        assertFalse(standardCommand.equals(new EditCommand(INDEX_SECOND_PERSON, DESC_AMY, tagsToRemove, renameTags)));
 
         // different descriptor -> returns false
-        assertFalse(standardCommand.equals(new EditCommand(INDEX_FIRST_PERSON, DESC_BOB)));
+        assertFalse(standardCommand.equals(new EditCommand(INDEX_FIRST_PERSON, DESC_BOB, tagsToRemove, renameTags)));
     }
 
     @Test
     public void toStringMethod() {
+        Set<Tag> tagsToRemove = new HashSet<>();
+        Map<Tag, Tag> renameTags = new HashMap<>();
+
         Index index = Index.fromOneBased(1);
         EditPersonDescriptor editPersonDescriptor = new EditPersonDescriptor();
-        EditCommand editCommand = new EditCommand(index, editPersonDescriptor);
+        EditCommand editCommand = new EditCommand(index, editPersonDescriptor, tagsToRemove, renameTags);
+
         String expected = EditCommand.class.getCanonicalName() + "{index=" + index + ", editPersonDescriptor="
                 + editPersonDescriptor + "}";
         assertEquals(expected, editCommand.toString());

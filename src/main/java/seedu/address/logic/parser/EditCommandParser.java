@@ -2,18 +2,16 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_ALLERGY;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_CONDITION;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_INSURANCE;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
+import static seedu.address.logic.parser.CliSyntax.*;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.EditCommand;
 import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.tag.Tag;
+
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Parses input arguments and creates a new EditCommand object
@@ -57,10 +55,32 @@ public class EditCommandParser implements Parser<EditCommand> {
             editPersonDescriptor.setAddress(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get()));
         }
 
+        Set<Tag> allergies = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_ALLERGY));
+        Set<Tag> conditions = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_CONDITION));
+        Set<Tag> insurances = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_INSURANCE));
+
+        if (!allergies.isEmpty()) {
+            editPersonDescriptor.addTags(allergies);
+        }
+        if (!conditions.isEmpty()) {
+            editPersonDescriptor.addTags(conditions);
+        }
+        if (!insurances.isEmpty()) {
+            editPersonDescriptor.addTags(insurances);
+        }
+
+        Set<Tag> allTags = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
+        if (!allTags.isEmpty()) {
+            editPersonDescriptor.addTags(allTags);
+        }
+
+        Set<Tag> tagsToRemove = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_REMOVE));
+        Map<Tag, Tag> renameTags = ParserUtil.parseRenameTags(argMultimap.getAllValues(PREFIX_RENAME));
+
         if (!editPersonDescriptor.isAnyFieldEdited()) {
             throw new ParseException(EditCommand.MESSAGE_NOT_EDITED);
         }
 
-        return new EditCommand(index, editPersonDescriptor);
+        return new EditCommand(index, editPersonDescriptor, tagsToRemove, renameTags);
     }
 }

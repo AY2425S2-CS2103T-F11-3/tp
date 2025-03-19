@@ -110,6 +110,18 @@ public class Person {
                 .add("phone", phone)
                 .add("email", email)
                 .add("address", address)
+                .add("tags", tags)
                 .toString();
+    }
+
+    public void removeTags(Set<Tag> tagsToRemove) {
+        this.tags.removeAll(tagsToRemove);
+    }
+
+    public void renameTag(Tag oldTag, Tag newTag) {
+        if (this.tags.contains(oldTag)) {
+            this.tags.remove(oldTag);
+            this.tags.add(newTag);
+        }
     }
 }

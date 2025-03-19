@@ -10,12 +10,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.CollectionUtil;
@@ -60,6 +55,8 @@ public class EditCommand extends Command {
 
     private final Index index;
     private final EditPersonDescriptor editPersonDescriptor;
+    private final Set<Tag> tagsToRemove;
+    private final Map<Tag, Tag> renameTags;
 
     private boolean needsConfirmation;
 
@@ -69,14 +66,21 @@ public class EditCommand extends Command {
      *
      * @param index of the person in the filtered person list to edit
      * @param editPersonDescriptor details to edit the person with
+     * @param tagsToRemove tags to be removed from the person
+     * @param renameTags map of tags to rename (old tag -> new tag)
      */
-    public EditCommand(Index index, EditPersonDescriptor editPersonDescriptor) {
+    public EditCommand(Index index, EditPersonDescriptor editPersonDescriptor, Set<Tag> tagsToRemove,
+                       Map<Tag, Tag> renameTags) {
         requireNonNull(index);
         requireNonNull(editPersonDescriptor);
+        requireNonNull(tagsToRemove);
+        requireNonNull(renameTags);
 
         this.index = index;
         this.editPersonDescriptor = new EditPersonDescriptor(editPersonDescriptor);
-        this.needsConfirmation = !editPersonDescriptor.isAnyFieldEdited(); // Only confirm if no fields provided
+        this.tagsToRemove = tagsToRemove;
+        this.renameTags = renameTags;
+        this.needsConfirmation = !editPersonDescriptor.isAnyFieldEdited();
     }
 
     @Override
@@ -96,6 +100,9 @@ public class EditCommand extends Command {
 
         Person personToEdit = lastShownList.get(index.getZeroBased());
         Person editedPerson = createEditedPerson(personToEdit, editPersonDescriptor);
+
+        editedPerson.removeTags(tagsToRemove);
+        renameTags.forEach(editedPerson::renameTag);
 
         // If no changes were made, notify the user
         if (personToEdit.equals(editedPerson)) {
@@ -151,6 +158,8 @@ public class EditCommand extends Command {
         return new ToStringBuilder(this)
                 .add("index", index)
                 .add("editPersonDescriptor", editPersonDescriptor)
+                .add("tagsToRemove", tagsToRemove)
+                .add("renameTags", renameTags)
                 .toString();
     }
 
@@ -224,6 +233,26 @@ public class EditCommand extends Command {
 
         public Optional<Set<Tag>> getTags() {
             return (tags != null) ? Optional.of(Collections.unmodifiableSet(tags)) : Optional.empty();
+        }
+
+        public void addTags(Set<Tag> newTags) {
+            if (this.tags == null) {
+                this.tags = new HashSet<>();
+            }
+            this.tags.addAll(newTags);
+        }
+
+        public void removeTags(Set<Tag> tagsToRemove) {
+            if (this.tags != null) {
+                this.tags.removeAll(tagsToRemove);
+            }
+        }
+
+        public void renameTag(Tag oldTag, Tag newTag) {
+            if (this.tags != null && this.tags.contains(oldTag)) {
+                this.tags.remove(oldTag);
+                this.tags.add(newTag);
+            }
         }
 
         @Override

@@ -15,5 +15,7 @@ public class CliSyntax {
     public static final Prefix PREFIX_CONDITION = new Prefix("tc/");
     public static final Prefix PREFIX_INSURANCE = new Prefix("ti/");
     public static final Prefix PREFIX_TAG = new Prefix("\t");
+    public static final Prefix PREFIX_REMOVE = new Prefix("tr/");
+    public static final Prefix PREFIX_RENAME = new Prefix("trn/");
 
 }

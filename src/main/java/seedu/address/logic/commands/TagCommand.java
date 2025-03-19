@@ -31,7 +31,7 @@ public class TagCommand extends Command {
           + "[" + PREFIX_CONDITION + "CONDITION]... "
           + "[" + PREFIX_INSURANCE + "INSURANCE]...\n"
           + "Example: " + COMMAND_WORD + " 1 "
-          + PREFIX_ALLERGY + "peanuts "
+          + PREFIX_ALLERGY + "ibuprofen "
           + PREFIX_CONDITION + "asthma "
           + PREFIX_INSURANCE + "medisave";
     public static final String MESSAGE_SUCCESS = "Tags added to patient: %1$s";
