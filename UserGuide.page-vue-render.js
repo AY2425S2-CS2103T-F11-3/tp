@@ -134,6 +134,6 @@ with(this){return _c('p',[_v("HealthSync data are saved automatically as a JSON 
 with(this){return _c('h2',{attrs:{"id":"tag-management"}},[_v("Tag Management"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tag-management","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Thu, 27 Mar 2025, 9:25:56 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Thu, 27 Mar 2025, 12:16:43 GMT+8]")])])])}
 }];
   
