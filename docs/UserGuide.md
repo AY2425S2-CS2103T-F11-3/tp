@@ -112,7 +112,6 @@ The main interface consists of several key components:
      * Exit: Closes the application safely.
    * **Help:** Opens a link to the HealthSync User Guide, providing instructions on how to use the application. <img src="images/HelpMenu.png" width="300" height="200">
 2. **Command Box** - 
-   * **Help:** Opens a link to the HealthSync User Guide, providing instructions on how to use the application. ![HelpMenu.png](images/HelpMenu.png)
    * Users can enter text-based commands to interact with the application.
 3. **Command Output Box**
    * Display messages in response to user commands.
