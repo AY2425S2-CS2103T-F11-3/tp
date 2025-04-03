@@ -115,6 +115,7 @@
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
         "adding-a-patient-add": "Adding a patient: add",
+        "scheduling-an-appointment-schedule": "Scheduling an appointment: schedule",
         "listing-all-patients-list": "Listing all patients : list",
         "sorting-patients-sort": "Sorting patients : sort",
         "editing-a-patient-edit": "Editing a patient : edit",
