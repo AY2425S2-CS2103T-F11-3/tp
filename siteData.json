@@ -45,7 +45,7 @@
         "setting-up-getting-started": "Setting up, getting started",
         "design": "Design",
         "architecture": "Architecture",
-        "ui-component": "UI component",
+        "ui-component": "UI Component",
         "logic-component": "Logic component",
         "model-component": "Model component",
         "storage-component": "Storage component",
@@ -109,6 +109,7 @@
       "headings": {
         "healthsync-user-guide": "HealthSync User Guide",
         "table-of-contents": "Table of Contents",
+        "how-to-use-this-user-guide": "How to use this User Guide",
         "legend": "Legend",
         "quick-start": "Quick start",
         "overview-of-gui": "Overview of GUI",
