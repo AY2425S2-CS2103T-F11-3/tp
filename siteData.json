@@ -51,7 +51,7 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
+        "undo-redo-feature": "Undo/redo feature",
         "proposed-data-archiving": "[Proposed] Data archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
@@ -60,11 +60,15 @@
         "use-cases": "Use Cases",
         "uc06-sort-patients-by-appointment": "UC06 - Sort Patients by Appointment",
         "non-functional-requirements": "Non-Functional Requirements",
-        "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
+        "appendix-instructions-for-manual-testing": "Appendix: Instructions for Manual Testing",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-person": "Deleting a person",
+        "deleting-a-patient": "Deleting a patient",
         "saving-data": "Saving data",
-        "glossary": "Glossary"
+        "glossary": "Glossary",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements",
+        "multiple-language-support": "Multiple Language Support",
+        "removal-of-past-appointment-dates": "Removal of past appointment dates",
+        "appendix-effort": "Appendix: Effort"
       },
       "headingKeywords": {}
     },
