@@ -114,6 +114,8 @@
         "legend": "Legend",
         "quick-start": "Quick start",
         "overview-of-gui": "Overview of GUI",
+        "operating-modes": "Operating Modes",
+        "command-availability-by-mode": "Command Availability by Mode",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
         "adding-a-patient-add": "Adding a patient: add",
