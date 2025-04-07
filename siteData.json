@@ -58,6 +58,7 @@
         "product-scope": "Product scope",
         "user-stories": "User Stories",
         "use-cases": "Use Cases",
+        "uc06-sort-patients-by-appointment": "UC06 - Sort Patients by Appointment",
         "non-functional-requirements": "Non-Functional Requirements",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
