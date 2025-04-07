@@ -617,6 +617,6 @@ with(this){return _c('h2',{attrs:{"id":"appendix-effort"}},[_c('strong',[_v("App
 with(this){return _c('ol',[_c('li',[_v("Our limited experience with GitHub and workflow management, including reviewing pull requests and resolving conflicts.")]),_v(" "),_c('li',[_v("HealthSync, as a Brownfield project based on AB3, presented several challenges that required substantial effort from our team to overcome. One key challenge was efficiently managing multiple entity types, such as those in normal and archive modes, compared to AB3, which dealt with just a single entity type.")]),_v(" "),_c('li',[_v("The time constraint, with the need to build a relatively bug-free product in just over six weeks.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 2:24:39 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 2:41:04 GMT+8]")])])])}
 }];
   
