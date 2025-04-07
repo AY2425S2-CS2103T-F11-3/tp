@@ -227,7 +227,7 @@ with(this){return _c('ul',[_c('li',[_v("Adds a tag to a patient based on their i
 with(this){return _c('p',[_v("Format: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag <INDEX> ta/ALLERGY")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag <INDEX> ti/INSURANCE")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag <INDEX> tc/CONDITION")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 1 ta/peanuts")]),_v(" assigns an allergy tag 'peanuts' to the patient at index 1.")]),_v(" "),_c('img',{attrs:{"src":"/tp/images/AddTagExample.png","width":"450","height":"320"}})]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 2 ti/prudential")]),_v(" assigns an insurance tag 'prudential' to the patient at index 2.")])]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 3 tc/diabetes")]),_v(" assigns a medical condition tag 'diabetes' to the patient at index 3.")])]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 4 ta/peanuts tc/headache ti/public")]),_v(" assigns an allergy tag 'peanuts', a medical condition tag 'headache' and insurance tag 'public' to the patient at index 4.")])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 1 ta/Shellfish")]),_v(" assigns an allergy tag 'Shellfish' to the patient at index 1.")]),_v(" "),_c('img',{attrs:{"src":"/tp/images/AddTagExample.png","width":"450","height":"320"}})]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 2 ti/prudential")]),_v(" assigns an insurance tag 'prudential' to the patient at index 2.")])]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 3 tc/diabetes")]),_v(" assigns a medical condition tag 'diabetes' to the patient at index 3.")])]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 4 ta/peanuts tc/headache ti/public")]),_v(" assigns an allergy tag 'peanuts', a medical condition tag 'headache' and insurance tag 'public' to the patient at index 4.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('blockquote',[_c('p',[_c('strong',[_v("⚠️ Warning:")]),_v(" If the tag already exists for the patient, it will be treated as a duplicate and not added again.")])])}
@@ -242,7 +242,7 @@ with(this){return _c('ul',[_c('li',[_v("Deletes a tag from a patient based on th
 with(this){return _c('p',[_v("Format: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag <INDEX> td/TAGNAME")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 1 td/peanuts")]),_v(" deletes the tag 'peanuts' from the patient at index 1.")]),_v(" "),_c('img',{attrs:{"src":"/tp/images/DeleteTagExample.png","width":"450","height":"320"}})]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 2 td/diabetes")]),_v(" deletes the tag 'diabetes' from the patient at index 2.")])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 1 td/Shellfish")]),_v(" deletes the tag 'Shellfish' from the patient at index 1.")]),_v(" "),_c('img',{attrs:{"src":"/tp/images/DeleteTagExample.png","width":"450","height":"320"}})]),_v(" "),_c('li',[_c('p',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("tag 2 td/diabetes")]),_v(" deletes the tag 'diabetes' from the patient at index 2.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('h3',{attrs:{"id":"undoing-a-command-undo"}},[_v("Undoing a command: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#undoing-a-command-undo","onclick":"event.stopPropagation()"}})])}
@@ -326,6 +326,6 @@ with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticC
 with(this){return _c('p',[_c('a',{attrs:{"href":"#table-of-contents"}},[_v("↑ Back to top")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 19:38:33 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 22:56:29 GMT+8]")])])])}
 }];
   
