@@ -329,7 +329,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('p',[_c('strong',[_v("2a.")]),_v(" No patients have scheduled appointments.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("2a1.")]),_v(" HealthSync sorts the list alphabetically by name.")]),_v(" "),_c('li',[_c('strong',[_v("2a2.")]),_v(" HealthSync notifies the user that no appointments are scheduled.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("3a.")]),_v(" Healthcare Administrator chooses to undo the command.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command.")])])])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("3b.")]),_v(" The sorting causes unexpected results due to invalid appointment data.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("3b1.")]),_v(" HealthSync displays an error message.")]),_v(" "),_c('li',[_c('strong',[_v("3b2")]),_v(". HealthSync reverts to the original order.")]),_v(" "),_c('li',[_v("Use case resumes from step 1.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc06-edit-patient-details"}},[_c('strong',[_v("UC06 - Edit Patient Details")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc06-edit-patient-details","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc07-edit-patient-details"}},[_c('strong',[_v("UC07 - Edit Patient Details")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc07-edit-patient-details","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -344,7 +344,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" The given index is invalid (out of range).\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync informs the user of the invalid index.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("3b.")]),_v(" The entered details are invalid (e.g. phone number contains letters).\n"),_c('ul',[_c('li',[_c('strong',[_v("3b1.")]),_v(" HealthSync informs the user of the invalid details.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("4a.")]),_v(" Healthcare Administrator does not confirm the action.\n"),_c('ul',[_c('li',[_c('strong',[_v("4a1.")]),_v(" HealthSync cancels the operation.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("4b.")]),_v(" Healthcare Administrator inputs an invalid response (not 'y' or 'n') when confirming.\n"),_c('ul',[_c('li',[_c('strong',[_v("4b1.")]),_v(" HealthSync displays an error message indicating the invalid input.")]),_v(" "),_c('li',[_c('strong',[_v("4b2.")]),_v(" Action is cancelled.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("6a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("6a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc07-add-an-emergency-contact"}},[_c('strong',[_v("UC07 - Add an Emergency Contact")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc07-add-an-emergency-contact","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc08-add-an-emergency-contact"}},[_c('strong',[_v("UC08 - Add an Emergency Contact")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc08-add-an-emergency-contact","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -359,7 +359,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" The given index is invalid (out of range or does not exist).\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync informs the user of the invalid index.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("3b.")]),_v(" The entered details are invalid (e.g. phone number contains letters).\n"),_c('ul',[_c('li',[_c('strong',[_v("3b1.")]),_v(" HealthSync informs the user of the invalid details.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("5a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("5a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc08-find-patients"}},[_c('strong',[_v("UC08 - Find Patients")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc08-find-patients","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc09-find-patients"}},[_c('strong',[_v("UC09 - Find Patients")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc09-find-patients","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -374,7 +374,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("4a.")]),_v(" No patients match the given keywords.\n"),_c('ul',[_c('li',[_c('strong',[_v("4a1.")]),_v(" HealthSync displays a message informing the user that 0 matches were found.")]),_v(" "),_c('li',[_v("Use case ends.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc09-archive-patient"}},[_c('strong',[_v("UC09 - Archive Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc09-archive-patient","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc10-archive-patient"}},[_c('strong',[_v("UC10 - Archive Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc10-archive-patient","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -389,7 +389,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" The given index is invalid (out of range or does not exist).\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync informs the user of the invalid index.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("5a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("5a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc10-list-archived-patients"}},[_c('strong',[_v("UC10 - List Archived Patients")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc10-list-archived-patients","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc11-list-archived-patients"}},[_c('strong',[_v("UC11 - List Archived Patients")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc11-list-archived-patients","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -404,7 +404,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("2a.")]),_v(" Healthcare Administrator tries to use any command other than "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("find")]),_v(", "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("unarchive")]),_v(", or "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("list")]),_v(" in archive mode.\n"),_c('ul',[_c('li',[_c('strong',[_v("2a1.")]),_v(" HealthSync informs the user that the command cannot be executed in archive mode.")]),_v(" "),_c('li',[_c('strong',[_v("2a2.")]),_v(" Use case ends.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc11-unarchive-patient"}},[_c('strong',[_v("UC11 - Unarchive Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc11-unarchive-patient","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc12-unarchive-patient"}},[_c('strong',[_v("UC12 - Unarchive Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc12-unarchive-patient","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -419,7 +419,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("2a.")]),_v(" The given index is invalid (out of range or does not exist).\n"),_c('ul',[_c('li',[_c('strong',[_v("2a1.")]),_v(" HealthSync informs the user of the invalid index.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc12-delete-a-patient"}},[_c('strong',[_v("UC12 - Delete a Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc12-delete-a-patient","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc13-delete-a-patient"}},[_c('strong',[_v("UC13 - Delete a Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc13-delete-a-patient","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -434,7 +434,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" The given index is invalid (out of range or does not exist).\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync informs the user of the invalid index.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("4a.")]),_v(" Healthcare Administrator does not confirm the action.\n"),_c('ul',[_c('li',[_c('strong',[_v("4a1.")]),_v(" HealthSync cancels the operation.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("4b.")]),_v(" Healthcare Administrator inputs an invalid response (not 'y' or 'n') when confirming.\n"),_c('ul',[_c('li',[_c('strong',[_v("4b1.")]),_v(" HealthSync displays an error message indicating the invalid input.")]),_v(" "),_c('li',[_c('strong',[_v("4b2.")]),_v(" Action is cancelled.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("7a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("7a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc13-clear-patient-list"}},[_c('strong',[_v("UC13 - Clear Patient List")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc13-clear-patient-list","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc14-clear-patient-list"}},[_c('strong',[_v("UC14 - Clear Patient List")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc14-clear-patient-list","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -449,7 +449,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" Healthcare Administrator does not confirm the action.\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync cancels the operation.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("3b.")]),_v(" Healthcare Administrator inputs an invalid response (not 'y' or 'n') when confirming.\n"),_c('ul',[_c('li',[_c('strong',[_v("3b1.")]),_v(" HealthSync displays an error message indicating the invalid input.")]),_v(" "),_c('li',[_c('strong',[_v("3b3.")]),_v(" Action is cancelled.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("5a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("5a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc14-add-tag-to-patient"}},[_c('strong',[_v("UC14 - Add Tag to Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc14-add-tag-to-patient","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc15-add-tag-to-patient"}},[_c('strong',[_v("UC15 - Add Tag to Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc15-add-tag-to-patient","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -464,7 +464,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" The given index is invalid (out of range or does not exist).\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync informs the user of the invalid index.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("3b.")]),_v(" The tag(s) input is invalid (e.g. tag name is not alphanumeric).\n"),_c('ul',[_c('li',[_c('strong',[_v("3b1.")]),_v(" HealthSync informs the user of the invalid input.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("4a.")]),_v(" The tag(s) already exist.\n"),_c('ul',[_c('li',[_c('strong',[_v("4a1.")]),_v(" HealthSync informs the user of the duplication.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("5a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("5a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc15-delete-tag-from-patient"}},[_c('strong',[_v("UC15 - Delete Tag from Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc15-delete-tag-from-patient","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc16-delete-tag-from-patient"}},[_c('strong',[_v("UC16 - Delete Tag from Patient")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc16-delete-tag-from-patient","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -479,7 +479,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" The given index is invalid (out of range or does not exist).\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync informs the user of the invalid index.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("4a.")]),_v(" The tag(s) do not exist.\n"),_c('ul',[_c('li',[_c('strong',[_v("4a1.")]),_v(" HealthSync warns the user of the invalid tag.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("5a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("5a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc16-undo-previous-command"}},[_c('strong',[_v("UC16 - Undo Previous Command")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc16-undo-previous-command","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc17-undo-previous-command"}},[_c('strong',[_v("UC17 - Undo Previous Command")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc17-undo-previous-command","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -494,7 +494,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("2a.")]),_v(" No previous state available to undo.\n"),_c('ul',[_c('li',[_c('strong',[_v("2a1.")]),_v(" HealthSync informs the user that there is nothing to undo.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("2b.")]),_v(" Undo has already been used.\n"),_c('ul',[_c('li',[_c('strong',[_v("2b1.")]),_v(" HealthSync informs the user that there is nothing to undo.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("2c.")]),_v(" The most recent command is a "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_v(", "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("redo")]),_v(" or "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("find")]),_v(" or "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("list")]),_v(" command.\n"),_c('ul',[_c('li',[_c('strong',[_v("2c1.")]),_v(" HealthSync informs the user that there is nothing to undo.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('strong',[_v("2d.")]),_v(" The most recent command is an "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("archive")]),_v(" command.\n"),_c('ul',[_c('li',[_c('strong',[_v("2d1.")]),_v(" HealthSync informs the user that undo cannot be performed for the archive command.")]),_v(" "),_c('li',[_v("Use case ends.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc17-redo-last-undone-command"}},[_c('strong',[_v("UC17 - Redo Last Undone Command")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc17-redo-last-undone-command","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc18-redo-last-undone-command"}},[_c('strong',[_v("UC18 - Redo Last Undone Command")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc18-redo-last-undone-command","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -509,7 +509,7 @@ with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("2a.")]),_v(" No command available to redo.\n"),_c('ul',[_c('li',[_c('strong',[_v("2a1.")]),_v(" HealthSync informs the user that there is nothing to redo.")]),_v(" "),_c('li',[_v("Use case ends.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"uc18-exit-application"}},[_c('strong',[_v("UC18 - Exit Application")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc18-exit-application","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"uc19-exit-application"}},[_c('strong',[_v("UC19 - Exit Application")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc19-exit-application","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
@@ -617,6 +617,6 @@ with(this){return _c('h2',{attrs:{"id":"appendix-effort"}},[_c('strong',[_v("App
 with(this){return _c('ol',[_c('li',[_v("Our limited experience with GitHub and workflow management, including reviewing pull requests and resolving conflicts.")]),_v(" "),_c('li',[_v("HealthSync, as a Brownfield project based on AB3, presented several challenges that required substantial effort from our team to overcome. One key challenge was efficiently managing multiple entity types, such as those in normal and archive modes, compared to AB3, which dealt with just a single entity type.")]),_v(" "),_c('li',[_v("The time constraint, with the need to build a relatively bug-free product in just over six weeks.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 2:48:20 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 2:49:43 GMT+8]")])])])}
 }];
   
