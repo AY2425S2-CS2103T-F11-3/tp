@@ -41,12 +41,12 @@
       "title": "Developer Guide",
       "headings": {
         "healthsync-developer-guide": "HealthSync Developer Guide",
+        "table-of-contents": "Table of Contents",
         "acknowledgements": "Acknowledgements",
         "setting-up-getting-started": "Setting up, getting started",
         "design": "Design",
         "architecture": "Architecture",
         "ui-component": "UI Component",
-        "ui-component-2": "UI Component",
         "logic-component": "Logic component",
         "model-component": "Model component",
         "storage-component": "Storage component",
