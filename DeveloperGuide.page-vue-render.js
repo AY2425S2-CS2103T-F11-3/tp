@@ -302,13 +302,13 @@ with(this){return _c('h4',{attrs:{"id":"uc05-sort-patients-by-name"}},[_c('stron
 with(this){return _c('p',[_c('strong',[_v("Main Success Scenario (MSS):")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_v("Healthcare Administrator requests to sort the list of patients by name.")]),_v(" "),_c('li',[_v("HealthSync prompts the user to choose the sorting order:\n"),_c('ul',[_c('li',[_v("Name (ascending alphabetical order).")]),_v(" "),_c('li',[_v("Appointment (ascending lexicographical order).")])])]),_v(" "),_c('li',[_v("Healthcare Administrator selects the preferred sorting order.")]),_v(" "),_c('li',[_v("HealthSync sorts the patient list accordingly.")]),_v(" "),_c('li',[_v("HealthSync displays the sorted patient list.")]),_v(" "),_c('li',[_v("Use case ends.")])])}
+with(this){return _c('ol',[_c('li',[_v("Healthcare Administrator requests to sort the list of patients by name.")]),_v(" "),_c('li',[_v("HealthSync sorts the patient list in ascending alphabetically order.")]),_v(" "),_c('li',[_v("HealthSync displays the sorted patient list.")]),_v(" "),_c('li',[_v("Use case ends.")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('strong',[_v("3a.")]),_v(" The entered sorting order is invalid (i.e. not name or appointment).\n"),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" HealthSync informs the user of the invalid sorting order.")]),_v(" "),_c('li',[_v("Use case resumes from step "),_c('strong',[_v("2")]),_v(".")])])]),_v(" "),_c('li',[_c('strong',[_v("5a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("5a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
+with(this){return _c('ul',[_c('li',[_c('strong',[_v("2a.")]),_v(" Healthcare Administrator chooses to undo the command.\n"),_c('ul',[_c('li',[_c('strong',[_v("2a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command")]),_v(".")])])])])}
 },function anonymous(
 ) {
 with(this){return _c('h3',{attrs:{"id":"uc06-sort-patients-by-appointment"}},[_c('strong',[_v("UC06 - Sort Patients by Appointment")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc06-sort-patients-by-appointment","onclick":"event.stopPropagation()"}})])}
@@ -323,7 +323,7 @@ with(this){return _c('ol',[_c('li',[_v("Healthcare Administrator requests to sor
 with(this){return _c('p',[_c('strong',[_v("Extensions:")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_c('strong',[_v("2a.")]),_v(" No patients have scheduled appointments.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("2a1.")]),_v(" HealthSync sorts the list alphabetically by name.")]),_v(" "),_c('li',[_c('strong',[_v("2a2.")]),_v(" HealthSync notifies the user that no appointments are scheduled.")]),_v(" "),_c('li',[_v("Use case ends.")])])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("3a.")]),_v(" Healthcare Administrator chooses to undo the command.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command.")])])])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("3b.")]),_v(" The sorting causes unexpected results due to invalid appointment data.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("3b1.")]),_v(" HealthSync displays an error message.")]),_v(" "),_c('li',[_c('strong',[_v("3b2")]),_v(". HealthSync reverts to the original order.")]),_v(" "),_c('li',[_v("Use case resumes from step 1.")])])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_c('strong',[_v("3a.")]),_v(" Healthcare Administrator chooses to undo the command.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("3a1.")]),_v(" Transition to "),_c('strong',[_v("UC09 - Undo Previous Command.")])])])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("3b.")]),_v(" The sorting causes unexpected results due to invalid appointment data.")]),_v(" "),_c('ul',[_c('li',[_c('strong',[_v("3b1.")]),_v(" HealthSync displays an error message.")]),_v(" "),_c('li',[_c('strong',[_v("3b2")]),_v(". HealthSync reverts to the original order.")]),_v(" "),_c('li',[_v("Use case resumes from step 1.")])])])])}
 },function anonymous(
 ) {
 with(this){return _c('h4',{attrs:{"id":"uc07-edit-patient-details"}},[_c('strong',[_v("UC07 - Edit Patient Details")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#uc07-edit-patient-details","onclick":"event.stopPropagation()"}})])}
@@ -620,6 +620,6 @@ with(this){return _c('h2',{attrs:{"id":"appendix-effort"}},[_c('strong',[_v("App
 with(this){return _c('ol',[_c('li',[_v("Our limited experience with GitHub and workflow management, including reviewing pull requests and resolving conflicts.")]),_v(" "),_c('li',[_v("HealthSync, as a Brownfield project based on AB3, presented several challenges that required substantial effort from our team to overcome. One key challenge was efficiently managing multiple entity types, such as those in normal and archive modes, compared to AB3, which dealt with just a single entity type.")]),_v(" "),_c('li',[_v("The time constraint, with the need to build a relatively bug-free product in just over six weeks.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 9:55:54 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Tue, 8 Apr 2025, 9:58:41 GMT+8]")])])])}
 }];
   
